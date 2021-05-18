@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <!--This is the tab name for the login page-->
+    <title>Login</title>
+<link rel="stylesheet" href="/static/css/main.css" />
+</head>
+<body>
+    <nav>
+        <div id="leftnav">
+
+            <h1> <span style="color: #b3f0ff">Log</span>In</h1>
+        </div>
+        <!--This is the navigation bar with the links to the other html pages-->
+        <div id="rightnav">
+            <a href="register">Register</a>
+            <a href="signin">Login</a>
+            <a href="../upload_file">Check-in</a>
+            <a href="/search">Search</a>
+            <a href="/home">Home</a>
+
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+<h1>Login</h1>
+
+<!--This is the form that requires the users username and password-->
+<form method="post">
+    <table>
+        <tr>
+            <td colspan="2" style="color: red"><i><small> {{ msg }}</small></i></td>
+        </tr>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input name="username" id="username" placeholder="Username" required></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="password" name="password" id="password" placeholder="Password" required></td>
+        </tr>
+        <tr>
+            <td colspan='2'><input type="submit" value="Login"></td></tr>
+    </table>
+
+</form>
+
+</html>

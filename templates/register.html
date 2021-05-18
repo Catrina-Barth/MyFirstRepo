@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <!--This is the tab name for the login page-->
+    <title>Registration</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
+</head>
+<body>
+    <nav>
+        <div id="leftnav">
+
+            <h1> <span style="color: #b3f0ff">Check</span>In</h1>
+        </div>
+        <! --The top navigation panel-->
+        <div id="rightnav">
+            <a href="register">Register</a>
+            <a href="signin">Login</a>
+            <a href="../upload_file">Check-in</a>
+            <a href="/search">Search</a>
+            <a href="/home">Home</a>
+
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<!--The login page where user can enter their personal information and create username and password-->
+<h1 style="font-family:verdana,serif; text-align:center">Welcome to the Registration Page</h1>
+
+<fieldset style="background-color:#b3f0ff;">
+<form action="" method="post">
+<p>
+
+
+    <table class="fixed">
+         <col width="100px" />
+        <tr >
+            <td colspan="3" style="color: red"><i><small> {{ msg }}</small></i></td>
+        </tr>
+         <tr >
+            <td colspan="3"> <br></td>
+        </tr>
+
+
+         <tr>
+            <td><label for="fname">First Name</label></td>
+            <td><input name="fname" id="fname" placeholder="First Name" required></td>
+         </tr>
+        <tr>
+            <td><label for="lname">Last Name</label></td>
+            <td><input name="lname" id="lname" placeholder="Last Name" required></td>
+         </tr>
+         <tr>
+            <td><label for="gender">Gender</label></td>
+            <td>
+                <input type="radio" name="gender" id="gender">Male
+                <input type="radio" name="gender" id="gender">Female
+            </td>
+         </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input name="email" id="email" placeholder="Email" required></td>
+         </tr>
+        <tr>
+            <td><label for="phone">Phone Number</label></td>
+            <td><input name="phone" id="phone" placeholder="Phone" required></td>
+         </tr>
+</table>
+    <br>
+    <br>
+    <table>
+
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input name="username" id="username" placeholder="Create Username" required></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="password" name="password" id="password" placeholder="Create Password" required></td>
+        </tr>
+
+
+
+    </table>
+
+<p>* Please enter your username and password to login to your account</p>
+    <br>
+<p>
+    <!--Button that submits the login page and takes you back to the homepage-->
+    <input type="submit" value="Register"/>
+</p>
+</form>
+</fieldset>
+
+</body>
+</html>

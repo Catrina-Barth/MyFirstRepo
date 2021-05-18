@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <!--This is the tab header for the home page-->
+    <title>Home Check-In</title>
+
+    <!--This is the stylesheet for all html pages-->
+    <link rel="stylesheet" href="/static/css/main.css" />
+</head>
+<body>
+<!--This is the navigation bar for all pages-->
+    <nav>
+        <div id="leftnav">
+
+            <h1> <span style="color: #b3f0ff"><img src="/static/logo.gif" height="40" width="40"> Check</span>In</h1>
+        </div>
+        <div id="rightnav">
+            <a href="register">Register</a>
+            <a href="signin">Login</a>
+            <a href="../upload_file">Check-in</a>
+            <a href="/search">Search</a>
+            <a href="/home">Home</a>
+
+        </div>
+    </nav>
+    <section id="frontpg" style="margin:0;">
+        <div id="frontSec">
+            <!--If the user logs in, then it will say "hello" and the users name-->
+            <h1>Hello
+                {% if username %}
+                    {{ username}}
+                {% endif %}
+
+                <!--This is the homepage front hello message-->
+            </h1>
+            <h1>We Always Stay Connected</h1>
+            <div style="text-align: center;"><img src="/static/checkingin.gif"></div>
+            <p>No need to worry if you cannot get ahold of someone you are worried about.  Always check-in so friends
+                and loved ones can check on you to make sure you are safe.</p>
+            <a href="/about_us">About Us</a>
+            <br>
+            <br>
+             {{now}}
+        </div>
+    </section>
+
+
+
+<!--Here are my links to 3 external websites-->
+    <br>
+<p><i><small>Don't forget to like us on:</small></i></p>
+<div>
+    <a href="https://www.facebook.com"><img src ="/static/facebook.gif" height="30" width="30"></a>
+    <a href="https://www.instagram.com"><img src ="/static/instagram.gif" height="30" width="30"></a>
+    <a href="http://www.twitter.com"><img src ="/static/twitt.gif" height="30" width="30"></a>
+</div>
+
+
+
+</body>
+</html>

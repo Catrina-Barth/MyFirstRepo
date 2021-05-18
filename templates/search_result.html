@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--This is the tab name for the login page-->
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
+</head>
+<body>
+    <nav>
+        <div id="leftnav">
+
+            <h1> <span style="color: #b3f0ff">Check</span>In</h1>
+        </div>
+        <!--The top navigation panel-->
+        <div id="rightnav">
+            <a href="register">Register</a>
+            <a href="signin">Login</a>
+            <a href="../upload_file">Check-in</a>
+            <a href="/search">Search</a>
+            <a href="/home">Home</a>
+
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<h1 style="font-family:verdana,serif; text-align:center">Search for Another Person</h1>
+<!--If the person is not found, then an error message will let them know there is no person-->
+<fieldset style="background-color:#b3f0ff;">
+
+    {% if person == "notfound" %}
+        Sorry, the person you are searching for has not checked in
+    {% else %}
+
+<!--This is the button that allows a user to go back to the search page to search for someone new-->
+    <p></p><button onclick="location.href='/search'" type="button" style="color: darkseagreen">Search Someone Else!</button></p>
+
+
+
+    <!-- This is the search results in table form. -->
+    <table border="10" style="width: 100%;">
+    <caption>
+            <details style="border-color: green">
+                <summary><h3>Your Requested Info is Below</h3></summary>
+                <p style="color: green"><i>This table includes the name, location, status update, date status posted, and a picture of the person you are
+                    searching for</i></p>
+            </details>
+    </caption>
+
+        <tr style="color: #0000FF">
+            <th>Description</th>
+            <th>Information</th>
+            <th rowspan="7" style="background: black" ;"><img src="static/{{ person.photo }}" height="400" width="300" style="border-color: #0000FF"
+    style="border-bottom-style: solid"></th>
+
+        </tr>
+        <tr>
+            <td>First name:</td>
+            <td>{{ person.firstname }}</td>
+        </tr>
+        <tr>
+            <td>Last name:</td>
+            <td>{{ person.lastname }}</td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>{{ person.city }}</td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td>{{ person.state }}</td>
+        </tr>
+        <tr>
+            <td>Status:</td>
+            <td>{{ person.status }}</td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td>{{ person.date }}</td>
+
+        </tr>
+
+
+    </table>
+
+
+
+    {% endif %}
+
+
+
+</fieldset>
+
+
+
+</body>
+</html>

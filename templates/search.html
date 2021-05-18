@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--This is the search tab name for the search html-->
+    <title>Search</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
+</head>
+<body>
+    <nav>
+        <div id="leftnav">
+
+            <h1> <span style="color: #b3f0ff">Check</span>In</h1>
+        </div>
+        <!--This is the navigation bar with the links to the other html pages-->
+        <div id="rightnav">
+            <a href="register">Register</a>
+            <a href="signin">Login</a>
+            <a href="../upload_file">Check-in</a>
+            <a href="/search">Search</a>
+            <a href="/home">Home</a>
+
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<h1 style="font-family:verdana,serif; text-align:center">Search for Another Person</h1>
+
+<fieldset style="background-color:#b3f0ff;">
+
+    <!--This is the form for the user to search for someone via first and last name-->
+<form action="" method=POST >
+    Enter a persons <i>First</i> and <i>Last</i> name
+    <p><label for="firstname">First Name </label><input name="firstname" id="firstname" placeholder="First Name" required></p>
+    <p><label for="lastname">Last Name </label><input  name="lastname" id="lastname" placeholder="Last Name" required></p>
+
+<!--This is the search button that will retrieve any files pertaining to their search-->
+    <input type="submit" value="Search">
+  <hr>
+   <!--This is my unordered list that tells the user they must enter first and last name of the person they are
+    searching-->
+    <h3>You must have the following</h3 >
+<ul>
+    <li>First Name</li>
+    <li>Last Name</li>
+</ul>
+
+</form>
+</fieldset>
+
+</body>
+</html>
